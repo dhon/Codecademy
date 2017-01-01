@@ -1,0 +1,35 @@
+pwd	outputs the name of the current working directory.
+ls	lists all files and directories in the working directory.
+cd	switches you into the directory you specify.
+mkdir	creates a new directory in the working directory.
+touch	creates a new file inside the working directory.
+
+ls -a	lists all contents of a directory, including hidden files and directories
+ls -l	lists all contents in long format
+ls -t	orders files and directories by the time they were last modified
+cp	copies files
+mv	moves and renames files
+rm	removes files
+rm -r	removes directories
+
+>	redirects standard output of a command to a file, overwriting previous content.
+>>	redirects standard output of a command to a file, appending new content to old content.
+<	redirects standard input to a command.
+|	redirects standard output of a command to another command.
+
+sort	sorts lines of text alphabetically.
+uniq	filters duplicate, adjacent lines of text.
+grep	searches for a text pattern and outputs it.
+	-i enables the command to be case insensitive
+	-R searches all files in a directory and outputs filenames and lines containing matched results
+	-R1 searches all files in a directory and outputs only filenames with matched results
+sed	searches for a text pattern, modifies it, and outputs it.
+	's/snow/rain/g' g is "global" replaces all instances instead of just first one
+
+~/.bash_profile is where environment settings are stored. You can edit this file with nano.
+export VAR="Val"	sets and exports an environment variable.
+USER			is the name of the current user.
+PS1			is the command prompt.
+HOME			is the home directory. It is usually not customized.
+PATH			returns a colon separated list of file paths. It is customized in advanced cases.
+env 			returns a list of environment variables.

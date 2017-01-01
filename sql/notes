@@ -1,0 +1,35 @@
+vars		Text, Integer, Real, Date
+CREATE TABLE	creates a new table.
+		CREATE TABLE celebs (id INTEGER, name TEXT, age INTEGER);
+INSERT INTO	adds a new row to a table.
+		INSERT INTO celebs (id, name, age) VALUES (1, 'Justin Bieber', 21);
+SELECT		queries data from a table.
+		SELECT * (or col) FROM celebs;
+UPDATE		edits a row in a table.
+		UPDATE celebs
+		SET age = 22
+		WHERE id = 1;
+ALTER TABLE	changes an existing table.
+		ALTER TABLE celebs ADD COLUMN twitter_handle TEXT;
+DELETE FROM	deletes rows from a table.
+		DELETE FROM celebs WHERE twitter_handle IS NULL;
+
+SELECT		query information from a database.
+WHERE		filter the results of the query based on conditions that you specify.
+LIKE / BETWEEN	can use with WHERE: LIKE se_en, %man%. BETWEEN 1990 and 2000.
+AND / OR	can use with WHERE to filter the query on two or more conditions.
+ORDER BY	sort the results of the query in either ascending or descending order.
+LIMIT		specify the maximum number of rows that the query will return.
+
+COUNT		takes the name of a column(s) as an argument and counts the number of rows where the value(s) is not NULL.
+GROUP BY	is a clause used with aggregate functions to combine data from one or more columns.
+SUM()		takes the column name as an argument and returns the sum of all the values in that column.
+MAX()		takes the column name as an argument and returns the largest value in that column.
+MIN()		takes the column name as an argument and returns the smallest value in that column.
+AVG()		takes a column name as an argument and returns the average value for that column.
+ROUND()		takes two arguments, a column name and the number of decimal places to round the values in that column.
+
+JOIN		Inner Join: will combine rows from different tables if the join condition is true.
+		SELECT * FROM albums JOIN artists ON albums.artist_id = artists.id;
+LEFT JOIN	Outer Join: will return every row in the left table, and if the join condition is not met, NULL values are used to fill in the columns from the right table.
+AS		is a keyword in SQL that allows you to rename a column or table in the result set using an alias.
